@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Google Maps Integration</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl212fooRl6hx0iuIb9CVfuREpY1ufr4Y&callback=initMap" async defer></script>
+</head>
+<body>
+<h1>Google Maps Integration</h1>
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+<script>
+  // Initialize the map
+  function initMap() {
+    // Define the initial coordinates
+    var initialCoords = { lat: 37.7749, lng: -122.4194 }; // Example: San Francisco, CA
+
+    // Create a new map centered at the initial coordinates
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: initialCoords
+    });
+
+    // Add a marker to the map
+    var marker = new google.maps.Marker({
+      position: initialCoords,
+      map: map,
+      title: 'Marker Title'
+    });
+
+    // Add an info window to the marker
+    var infowindow = new google.maps.InfoWindow({
+      content: 'This is a marker info window.'
+    });
+
+    // Open the info window when the map loads
+    infowindow.open(map, marker);
+  }
+</script>
+
+</body>
+</html>
