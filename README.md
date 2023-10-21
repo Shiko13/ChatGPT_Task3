@@ -34,8 +34,6 @@ Before running the application, make sure you have the following installed:
     spring.datasource.password=rootroot
     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
-    # Google Maps API Key
-    google.maps.api.key=AIzaSyDl212fooRl6hx0iuIb9CVfuREpY1ufr4Y
     ```
 
 3. Build and run the application using Maven:
